@@ -14,5 +14,23 @@ var channel = "510128835895885834";//ايدي الروم
 	},305);
 })
 
+    client.on('message', message => {
+        var prefix = "$";
+        if (message.author.bot) return;
+        if (!message.content.startsWith(prefix)) return;
+      
+        let command = message.content.split(" ")[0];
+        command = command.slice(prefix.length);
+      
+      
+      let args = message.content.split(" ").slice(1);
+      let x = args.join(" ")
+        if(message.content.startsWith('1say')) {
+            message.channel.send(''+x);
+                message.delete(999)
+        }
+        
+       
+      });
 
 client.login("NTEwMTI2MTk0NzU1MjM5OTU3.DsXzwQ.Qq6zGxHUg6itVCcHol2GJSUlYU8");//chchch2@gmail.com:chchch2
